@@ -1,0 +1,76 @@
+@startuml DIRIGERA_Architecture
+
+!define RECTANGLE component
+
+package "DIRIGERA Hub" {
+
+    package "Hardware" {
+        [STM32MP157 SoC] as SoC
+        [M15T4G16256A RAM] as RAM
+        [THGBMNG5D1LBAIL e-MMC] as eMMC
+        [muRata Type2AW (Wi-Fi)] as WiFi
+        [MGM210L (Zigbee)] as ZigbeeChip
+        [Action Button] as Button
+        [LED Ring] as LED
+        [UART Port] as UART
+    }
+
+    package "Software (Linux OS)" {
+        [Nexus REST API\n(Port 8443)] as API
+        [Mosquitto\n(MQTT Broker)] as MQTT
+        [Avahi\n(mDNS/DNS-SD)] as Avahi
+        [ZigBee IoTC Daemon] as ZigbeeDaemon
+        [Cloud Connector Service] as CloudConnector
+        [Apple HomeKit Daemon] as HomeKitDaemon
+        [Sonos Daemon] as SonosDaemon
+        [RAUC / Nexus OTA Daemon] as UpdateService
+        [Time Service] as TimeService
+        [Data Daemon] as DataDaemon
+        [Gateway Daemon] as GatewayDaemon
+        [Fluent Bit] as FluentBit
+        [D-Bus System Bus] as DBus
+    }
+}
+
+package "Local Network" {
+    [IKEA Home Smart App] as App
+    [Zigbee Devices] as ZigbeeDevices
+    [Sonos Speakers] as SonosSpeakers
+    [HomeKit Controllers] as HomeKitControllers
+}
+
+package "Internet" {
+    [IKEA Cloud] as IKEACloud
+    [OTA Server] as OTAServer
+    [NTP Server] as NTPServer
+}
+
+' External Connections
+App <--> API : HTTPS (8443)
+ZigbeeDevices <--> ZigbeeChip : Zigbee Protocol
+ZigbeeChip <--> ZigbeeDaemon : UART / SPI
+WiFi <--> API : Network Interface
+CloudConnector <--> IKEACloud : HTTPS/Websocket
+UpdateService <--> OTAServer : HTTPS
+TimeService <--> NTPServer : NTP (UDP 123)
+SonosDaemon <--> SonosSpeakers : LAN
+HomeKitDaemon <--> HomeKitControllers : LAN
+
+' Internal Software Communication
+API <--> MQTT
+ZigbeeDaemon <--> MQTT
+DataDaemon <--> MQTT
+GatewayDaemon <--> MQTT
+CloudConnector <--> MQTT
+HomeKitDaemon <--> MQTT
+SonosDaemon <--> MQTT
+
+MQTT <--> DBus : (Implicit)
+GatewayDaemon <--> DBus
+
+' Hardware interactions
+Button --> GatewayDaemon : GPIO
+GatewayDaemon --> LED : I2C / PWM
+FluentBit --> API : Logging
+
+@enduml

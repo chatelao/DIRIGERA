@@ -71,9 +71,25 @@ print(devices)
 # client.edit_device_state(id='DEVICE_ID', new_state={'attributes': {'isOn': True}})
 ```
 
-## Images
+## Gallery
 
-Images of the circuit board are stored in the [images](images/) folder. This includes detailed images of the main chips and the UART port.
+Images of the circuit board and components are stored in the [images](images/) folder.
+
+| Global Overview | Top Overview | Bottom View |
+| :---: | :---: | :---: |
+| <img src="images/global%20overview.jpg" width="250" alt="Global Overview" /> | <img src="images/top%20overview.JPG" width="250" alt="Top Overview" /> | <img src="images/bottom.jpg" width="250" alt="Bottom View" /> |
+
+| Top Close-Up 1 | Top Close-Up 2 | Top Close-Up 3 |
+| :---: | :---: | :---: |
+| <img src="images/top%20close%201.JPG" width="250" alt="Top Close-Up 1" /> | <img src="images/top%20close%202.JPG" width="250" alt="Top Close-Up 2" /> | <img src="images/top%20closeup.JPG" width="250" alt="Top Close-Up 3" /> |
+
+| LED Ring | MGM210L Zigbee | muRata Type2AW Wi-Fi |
+| :---: | :---: | :---: |
+| <img src="images/top%20led%20ring.JPG" width="250" alt="Top LED Ring" /> | <img src="images/MGM210L.jpg" width="250" alt="MGM210L Zigbee Module" /> | <img src="images/muRata%20Type2AW.jpg" width="250" alt="muRata Type2AW Wi-Fi Module" /> |
+
+| UART Port |
+| :---: |
+| <img src="images/uart.jpg" width="250" alt="UART Port Header" /> |
 
 ## Logs
 

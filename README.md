@@ -86,6 +86,8 @@ The [logs](logs/) folder contains system logs, such as `boot.log`, which provide
 
 ## Other repos worth looking into
 
+For a comprehensive list of open-source libraries, integrations, and tools, see [Appendix E: Related Open-Source Projects](specifications/markdown/afp-goca-reference-03/Appendix%20E.md).
+
 - [mattias73andersson/dirigera-client-poc](https://github.com/mattias73andersson/dirigera-client-poc)
 - [dvdgeisler/DirigeraClient](https://github.com/dvdgeisler/DirigeraClient)
 

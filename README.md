@@ -1,6 +1,8 @@
 # DIRIGERA
 
-> This page and its content is not affiliated with IKEA of Sweden AB.
+> This page and its content is not affiliated with [IKEA](https://www.ikea.com) of Sweden AB.
+
+For product information or purchasing the DIRIGERA hub, visit the [IKEA shop](https://www.ikea.com).
 
 ## General Information
 

@@ -8,13 +8,14 @@ For product information or purchasing the DIRIGERA hub, visit the [IKEA shop](ht
 
 ### Hardware
 
-| Chip   | Part No.                                                                                                         |       |
-| ------ | ---------------------------------------------------------------------------------------------------------------- | ----- |
-| SoC    | [STM32MP157CAB3](https://www.st.com/resource/en/datasheet/stm32mp157c.pdf)                                       |       |
-| RAM    | [M15T4G16256A](https://www.alldatasheet.com/datasheet-pdf/pdf/1284521/ESMT/M15T4G16256A.html)                    | 500MB |
-| e-MMC  | [THGBMNG5D1LBAIL](https://www.alldatasheet.com/datasheet-pdf/pdf/1244282/TOSHIBA/THGBMNG5D1LBAIL.html)           | 4GB   |
-| Wi-Fi  | muRata Type2AW                                                                                                   |       |
-| Zigbee | [MGM210L](https://www.silabs.com/documents/public/data-sheets/mgm210l-datasheet.pdf) based on  [EFR32MG21](https://www.silabs.com/documents/public/data-sheets/efr32mg21-datasheet.pdf) |       |
+| Component | Part No. / Model | Specs / Description | Est. Price | Sources & Distributors |
+| --- | --- | --- | --- | --- |
+| **SoC** | [STM32MP157CAB3](https://www.st.com/resource/en/datasheet/stm32mp157c.pdf) | Dual ARM Cortex-A7 @ 650 MHz, Cortex-M4 @ 209 MHz, 3D GPU | ~$10.50 – $14.50 | STMicroelectronics, Mouser, DigiKey, Farnell, Arrow |
+| **RAM** | [M15T4G16256A](https://www.alldatasheet.com/datasheet-pdf/pdf/1284521/ESMT/M15T4G16256A.html) | 512 MB (4 Gb) DDR3L SDRAM | ~$2.50 – $4.50 | ESMT, Mouser, DigiKey, Octopart |
+| **eMMC** | [THGBMNG5D1LBAIL](https://www.alldatasheet.com/datasheet-pdf/pdf/1244282/TOSHIBA/THGBMNG5D1LBAIL.html) | 4 GB eMMC 5.0 Flash Memory | ~$3.00 – $6.00 | Toshiba / Kioxia, Mouser, DigiKey, Octopart |
+| **Wi-Fi / BT** | [muRata Type2AW](https://www.murata.com/en-global/products/connectivitymodule/wi-fi-bluetooth/overview/lineup/type2aw) (LBEE5PK2AW) | Wi-Fi 5 (802.11a/b/g/n/ac) + BT 5.2 (Infineon CYW4373E) | ~$8.00 – $13.00 | Murata, Mouser, DigiKey, Farnell, Arrow |
+| **Zigbee / Thread** | [MGM210L](https://www.silabs.com/documents/public/data-sheets/mgm210l-datasheet.pdf) (based on [EFR32MG21](https://www.silabs.com/documents/public/data-sheets/efr32mg21-datasheet.pdf)) | 2.4 GHz 802.15.4 / Zigbee 3.0 / Thread / Matter module (ARM Cortex-M33) | ~$4.50 – $7.00 | Silicon Labs, Mouser, DigiKey, Farnell, Arrow |
+| **PMIC** | [STPMIC1](https://www.st.com/en/power-management/stpmic1.html) | Power Management IC (4 Buck converters, 6 LDOs, 1 Boost) | ~$2.00 – $3.50 | STMicroelectronics, Mouser, DigiKey, Farnell |
 
 ### Software
 
